@@ -1,15 +1,15 @@
 :root {
-  --bg: #050608;
-  --surface: #111318;
-  --surface-2: #171a21;
-  --line: #272b35;
-  --text: #f7f7f8;
-  --muted: #a8adba;
-  --soft: #727988;
-  --orange: #ff6b18;
-  --orange-2: #ff9c27;
-  --blue: #2d83ff;
-  --blue-2: #62a3ff;
+  --bg: #f7fafc;
+  --surface: #ffffff;
+  --surface-2: #eef4f7;
+  --line: #d5e0e6;
+  --text: #195477;
+  --muted: #5f6f79;
+  --soft: #77858d;
+  --orange: #f58220;
+  --orange-2: #d96b0b;
+  --blue: #2479a8;
+  --blue-2: #1e5f86;
   --white: #ffffff;
 }
 
@@ -26,7 +26,7 @@ body {
   font-family: Inter, Arial, sans-serif;
   color: var(--text);
   background:
-    linear-gradient(180deg, rgba(45, 131, 255, 0.04), transparent 520px),
+    linear-gradient(180deg, rgba(36, 121, 168, 0.06), transparent 520px),
     var(--bg);
   line-height: 1.6;
 }
@@ -50,9 +50,9 @@ img {
   position: sticky;
   top: 0;
   z-index: 30;
-  background: rgba(5, 6, 8, 0.86);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--line);
 }
 
 .site-header::before {
@@ -100,7 +100,7 @@ img {
 }
 
 .site-menu a:hover {
-  color: var(--text);
+  color: var(--orange);
 }
 
 .nav-cta,
@@ -120,14 +120,14 @@ img {
 
 .nav-cta,
 .button.primary {
-  color: #111318;
-  background: var(--white);
+  color: var(--white);
+  background: var(--blue);
   box-shadow: 0 18px 44px rgba(255, 107, 24, 0.16);
 }
 
 .button.secondary {
   color: var(--text);
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--surface);
   backdrop-filter: blur(8px);
 }
 
@@ -135,17 +135,17 @@ img {
 .footer-cta:hover,
 .nav-cta:hover {
   transform: translateY(-1px);
-  border-color: rgba(255, 255, 255, 0.24);
+  border-color: var(--orange);
   box-shadow: 0 18px 44px rgba(45, 131, 255, 0.14);
 }
 
 .nav-cta:hover {
-  color: #111318;
-  background: var(--white);
+  color: var(--white);
+  background: var(--orange);
 }
 
 .site-menu .nav-cta:hover {
-  color: #111318;
+  color: var(--white);
 }
 
 .menu-toggle {
@@ -175,10 +175,10 @@ img {
   display: flex;
   align-items: center;
   overflow: hidden;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--line);
   background:
-    linear-gradient(90deg, rgba(5, 6, 8, 0.98) 0%, rgba(5, 6, 8, 0.72) 46%, rgba(5, 6, 8, 0.48) 100%),
-    linear-gradient(180deg, rgba(5, 6, 8, 0.18), rgba(5, 6, 8, 0.84)),
+    linear-gradient(90deg, rgba(247, 250, 252, 0.98) 0%, rgba(247, 250, 252, 0.84) 46%, rgba(247, 250, 252, 0.42) 100%),
+    linear-gradient(180deg, rgba(247, 250, 252, 0.16), rgba(247, 250, 252, 0.72)),
     url("assets/hero-background.jpeg") center right / cover no-repeat;
 }
 
@@ -187,8 +187,8 @@ img {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, transparent 0%, rgba(5, 6, 8, 0.36) 62%, rgba(5, 6, 8, 0.98) 100%),
-    linear-gradient(90deg, rgba(255, 107, 24, 0.08), transparent 42%);
+    linear-gradient(180deg, transparent 0%, rgba(247, 250, 252, 0.08) 62%, rgba(247, 250, 252, 0.92) 100%),
+    linear-gradient(90deg, rgba(245, 130, 32, 0.08), transparent 42%);
   pointer-events: none;
 }
 
@@ -234,13 +234,14 @@ h1 {
   font-size: clamp(54px, 8vw, 98px);
   line-height: 0.96;
   letter-spacing: 0;
-  text-shadow: 0 18px 58px rgba(0, 0, 0, 0.64);
+  color: var(--blue-2);
+  text-shadow: 0 8px 28px rgba(36, 121, 168, 0.14);
 }
 
 h1 span,
 .story-section h2 span {
   display: block;
-  color: rgba(247, 247, 248, 0.38);
+  color: var(--orange);
 }
 
 h2 {
@@ -258,9 +259,9 @@ h3 {
 
 .hero-lead {
   max-width: 760px;
-  color: #c6cedd;
+  color: var(--muted);
   font-size: 20px;
-  text-shadow: 0 10px 36px rgba(0, 0, 0, 0.58);
+  text-shadow: none;
 }
 
 .hero-actions {
@@ -278,11 +279,11 @@ h3 {
 }
 
 .hero-chips span {
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid var(--line);
   border-radius: 999px;
   padding: 9px 13px;
-  color: #d6dbea;
-  background: rgba(8, 10, 14, 0.48);
+  color: var(--blue-2);
+  background: rgba(255, 255, 255, 0.78);
   backdrop-filter: blur(10px);
   font-size: 13px;
   font-weight: 800;
@@ -323,7 +324,7 @@ h3 {
 .proof-strip {
   padding: 22px 0;
   background: linear-gradient(90deg, rgba(255, 107, 24, 0.08), rgba(45, 131, 255, 0.08));
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--line);
 }
 
 .proof-grid {
@@ -334,13 +335,13 @@ h3 {
 
 .proof-grid p {
   margin: 0;
-  color: var(--muted);
+  color: var(--blue-2);
   font-weight: 800;
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--line);
   border-radius: 999px;
   padding: 10px 12px;
-  background: rgba(5, 6, 8, 0.36);
+  background: var(--surface);
 }
 
 .story-grid,
@@ -375,8 +376,8 @@ h3 {
 
 .muted {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent),
-    #090a0d;
+    linear-gradient(180deg, rgba(36, 121, 168, 0.04), transparent),
+    #edf4f7;
 }
 
 .pillar-heading,
@@ -403,10 +404,8 @@ h3 {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.01)),
-    rgba(17, 19, 24, 0.86);
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.22);
+  background: var(--surface);
+  box-shadow: 0 18px 48px rgba(25, 84, 119, 0.09);
 }
 
 .service-card::after,
@@ -642,7 +641,7 @@ h3 {
   background:
     radial-gradient(circle at 18% 20%, rgba(255, 107, 24, 0.12), transparent 32%),
     radial-gradient(circle at 82% 72%, rgba(45, 131, 255, 0.12), transparent 30%),
-    #06070a;
+    #f1f7f9;
 }
 
 .contact-section .contact-grid {
@@ -650,12 +649,10 @@ h3 {
   gap: 32px;
   align-items: stretch;
   padding: 26px;
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  border: 1px solid var(--line);
   border-radius: 8px;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.012)),
-    rgba(13, 15, 20, 0.84);
-  box-shadow: 0 30px 110px rgba(0, 0, 0, 0.38);
+  background: var(--surface);
+  box-shadow: 0 22px 70px rgba(25, 84, 119, 0.1);
 }
 
 .contact-intro {
@@ -684,10 +681,10 @@ h3 {
 .contact-highlights div {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  border: 1px solid var(--line);
   border-radius: 8px;
   padding: 16px 16px 16px 46px;
-  background: rgba(255, 255, 255, 0.035);
+  background: var(--surface-2);
 }
 
 .contact-highlights div::before {
@@ -719,7 +716,7 @@ h3 {
 .form-header {
   margin-bottom: 22px;
   padding-bottom: 18px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--line);
 }
 
 .form-header span {
@@ -764,9 +761,7 @@ h3 {
 .contact-form {
   padding: 26px;
   border-color: rgba(255, 107, 24, 0.24);
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.015)),
-    rgba(18, 21, 28, 0.9);
+  background: var(--surface-2);
   box-shadow: none;
 }
 
@@ -799,7 +794,7 @@ textarea {
   border-radius: 8px;
   padding: 13px 14px;
   color: var(--text);
-  background: var(--surface-2);
+  background: var(--surface);
   font: inherit;
   outline: none;
 }
@@ -849,8 +844,8 @@ textarea:focus {
   width: 100%;
   min-height: 48px;
   border-color: transparent;
-  color: #111318;
-  background: var(--white);
+  color: var(--white);
+  background: var(--orange);
   cursor: pointer;
 }
 
@@ -972,8 +967,8 @@ textarea:focus {
 
 .site-footer {
   padding: 70px 0 28px;
-  background: #0b0c10;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: #e8f1f4;
+  border-top: 1px solid var(--line);
 }
 
 .footer-grid {
@@ -1055,8 +1050,8 @@ textarea:focus {
 .footer-cta {
   width: 100%;
   margin-top: 12px;
-  color: var(--text);
-  background: transparent;
+  color: var(--blue-2);
+  background: var(--surface);
 }
 
 .legal-row {
@@ -1065,7 +1060,7 @@ textarea:focus {
   gap: 18px;
   margin-top: 44px;
   padding-top: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--line);
   color: var(--soft);
   font-size: 13px;
 }
@@ -1082,7 +1077,7 @@ textarea:focus {
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 8px;
-  color: #111318;
+  color: var(--blue-2);
   background: var(--white);
   box-shadow: 0 18px 44px rgba(255, 107, 24, 0.2), 0 18px 44px rgba(0, 0, 0, 0.34);
   cursor: pointer;
@@ -1133,14 +1128,12 @@ textarea:focus {
 }
 
 .whatsapp-label {
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  border: 1px solid var(--line);
   border-radius: 8px;
   padding: 12px 15px;
-  color: var(--text);
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02)),
-    rgba(17, 19, 24, 0.96);
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28);
+  color: var(--blue-2);
+  background: var(--surface);
+  box-shadow: 0 18px 44px rgba(25, 84, 119, 0.14);
   font-size: 13px;
   font-weight: 900;
   transform: translateX(10px);
