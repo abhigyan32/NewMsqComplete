@@ -4,7 +4,10 @@ const leadForm = document.querySelector("#lead-form");
 const formNote = document.querySelector("#form-note");
 const brandLink = document.querySelector(".brand");
 
-if (siteMenu && !siteMenu.querySelector('a[href="index.html"]')) {
+if (
+  siteMenu &&
+  !siteMenu.querySelector('a[href="index.html"], a[href="/"]')
+) {
   const homeLink = document.createElement("a");
   homeLink.href = "index.html";
   homeLink.textContent = "Home";
