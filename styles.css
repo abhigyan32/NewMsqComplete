@@ -767,7 +767,7 @@ h3 {
 }
 
 .ecosystem-card li::before {
-  content: "â€¢";
+  content: "•";
   position: absolute;
   left: 0;
   color: var(--orange);
